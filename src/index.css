@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Magnita";
+  src: url("./fonts/Magnita.woff") format("woff"), url("./fonts/Magnita.woff2") format("woff2"), url("./fonts/Magnita.svg#Magnita") format("svg"), url("./fonts/Magnita.eot"), url("./fonts/Magnita.eot?#iefix") format("embedded-opentype"), url("./fonts/Magnita.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Signeton";
+  src: url("./fonts/Signeton.eot");
+  src: url("./fonts/Signeton.eot?#iefix") format("embedded-opentype"), url("./fonts/Signeton.woff2") format("woff2"), url("./fonts/Signeton.woff") format("woff"), url("./fonts/Signeton.ttf") format("truetype"), url("./fonts/Signeton.svg#Signeton") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter.eot");
+  src: url("./fonts/Inter.eot?#iefix") format("embedded-opentype"), url("./fonts/Inter.woff2") format("woff2"), url("./fonts/Inter.woff") format("woff"), url("./fonts/Inter.ttf") format("truetype"), url("./fonts/Inter.svg#Signeton") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  /* font-family: "Magnita", serif; */
+  /* font-family: "Inter", sans-serif; */
+  /* font-family: "Signeton"; */
+}
