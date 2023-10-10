@@ -1,0 +1,14 @@
+.burgerMenu {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid rgba(229, 231, 235, 0.9);
+}
+
+@media (min-width: 990px) {
+  .burgerMenu {
+    display: none;
+  }
+}

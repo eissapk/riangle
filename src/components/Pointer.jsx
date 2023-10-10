@@ -4,7 +4,7 @@ import styles from "./Pointer.module.css";
 export default function Pointer({ multiplier }) {
   const [coords, setCoords] = useState({ x: 0, y: 0 });
   const [glow, setGlow] = useState(false);
-  const [opacity, setOpacity] = useState(1);
+  const [opacity, setOpacity] = useState(0);
   const size = 40;
   const dim = { onGlow: size * multiplier, onDefault: size };
 
@@ -15,12 +15,20 @@ export default function Pointer({ multiplier }) {
   };
   const mouseLeave = () => setOpacity(0);
   const mouseEnter = () => setOpacity(1);
+  const touchStart = () => {
+    document.body.removeEventListener("mousemove", mouseMove);
+    document.body.removeEventListener("mouseleave", mouseLeave);
+    document.body.removeEventListener("mouseenter", mouseEnter);
+    window.removeEventListener("touchdown", touchStart);
+  };
 
   useEffect(() => {
+    window.addEventListener("touchstart", touchStart);
     document.body.addEventListener("mousemove", mouseMove);
     document.body.addEventListener("mouseleave", mouseLeave);
     document.body.addEventListener("mouseenter", mouseEnter);
     return () => {
+      window.removeEventListener("touchstart", touchStart);
       document.body.removeEventListener("mousemove", mouseMove);
       document.body.removeEventListener("mouseleave", mouseLeave);
       document.body.removeEventListener("mouseenter", mouseEnter);

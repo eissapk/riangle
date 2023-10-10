@@ -1,13 +1,14 @@
 .header {
   height: 60px;
-  z-index: 999;
+  z-index: 9;
   top: 0px;
   left: 0px;
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(229, 231, 235, 0.9);
-  display: flex;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: 60px 1fr 60px;
+  grid-template-rows: 1fr;
 }
 .logo {
   width: 60px;
@@ -15,7 +16,36 @@
   padding-right: 20px;
   background-color: transparent;
   border-right: 1px solid rgba(229, 231, 235, 0.9);
-  align-self: center;
+  position: relative;
+}
+.logo svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .name {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: transparent;
+  width: fit-content;
+}
+.name svg {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.name:hover svg path {
+  fill: var(--text-color-hover);
+  transition: all 0.3s ease-in-out;
+}
+
+.logo:hover {
+  background-color: rgba(244, 51, 51, 0.1);
+}
+
+@media (min-width: 990px) {
+  .header {
+    grid-template-columns: 60px 140px 1fr;
+  }
 }

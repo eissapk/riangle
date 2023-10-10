@@ -1,14 +1,19 @@
 import Header from "./components/UI/Header";
-import Main from "./components/UI/Main";
+import Stories from "./pages/Stories";
 import Footer from "./components/UI/Footer";
 import DataProvider from "./Store/DataProvider";
 import Pointer from "./components/Pointer";
 
-function App() {
+function App({ path }) {
+  const maintenance = <div id="maintenance">"{path}" route is under maintenance</div>;
   return (
     <DataProvider>
-      <Header />
-      <Main />
+      <Header path={path} />
+      {path == "/" && maintenance}
+      {path == "/work" && maintenance}
+      {path == "/about" && maintenance}
+      {path == "/stories" && <Stories />}
+      {path == "/contact" && maintenance}
       <Footer />
       <Pointer multiplier={2} />
     </DataProvider>

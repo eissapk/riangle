@@ -30,9 +30,18 @@
   box-sizing: border-box;
 }
 
-body {
+:root {
+  --text-color: black;
+  --text-color-hover: #f43333;
+  --bg-color: white;
+  --border-color: rgb(229, 231, 235);
+}
+
+body,
+html {
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
   font-family: Helvetica, Arial, sans-serif;
   /* font-family: "Magnita", serif; */
   /* font-family: "Inter", sans-serif; */
@@ -53,4 +62,12 @@ a {
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
+}
+
+#maintenance {
+  height: calc(100vh - 250px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

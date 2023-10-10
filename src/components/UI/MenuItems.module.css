@@ -1,0 +1,77 @@
+.ul_mobile {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ul_mobile li,
+.ul_mobile button {
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+}
+.ul_mobile button {
+  border-bottom: 0;
+}
+
+.ul_mobile li a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-family: "Magnita", serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.ul_mobile li a:hover {
+  color: var(--text-color-hover);
+}
+
+.ul_mobile button:hover svg path {
+  stroke: var(--text-color-hover);
+}
+
+.ul_desktop {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-self: end;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.ul_desktop li {
+  height: 100%;
+  border-left: 1px solid var(--border-color);
+}
+
+.ul_desktop li a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0 23px;
+  color: var(--text-color);
+}
+
+.ul_desktop li a:hover {
+  color: var(--text-color-hover);
+}
+
+.ul_desktop button:hover svg path {
+  stroke: var(--text-color-hover);
+}
+
+.ul_desktop button {
+  height: 100%;
+  padding: 0 23px;
+  border-left: 1px solid var(--border-color);
+}

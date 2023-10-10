@@ -1,0 +1,37 @@
+.card {
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.card img {
+  width: 100%;
+}
+.card a p,
+.card a span,
+.card a h3 {
+  color: var(--text-color);
+}
+
+.card h3 {
+  font-family: "Magnita", serif;
+  font-weight: 400;
+  font-size: 32px;
+  margin: 0;
+  margin-top: 40px;
+}
+.card p {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #9ca3af !important;
+}
+
+.card span {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  float: right;
+}
