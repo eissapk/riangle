@@ -24,9 +24,33 @@
   font-display: swap;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 body {
+  margin: 0;
+  padding: 0;
   font-family: Helvetica, Arial, sans-serif;
   /* font-family: "Magnita", serif; */
   /* font-family: "Inter", sans-serif; */
   /* font-family: "Signeton"; */
+}
+
+svg {
+  pointer-events: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+a {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }

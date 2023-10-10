@@ -1,6 +1,6 @@
 export default function Name() {
   return (
-    <svg width={101} height={16} viewBox="0 0 101 16" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ translate: "none", rotate: "none", scale: "none", transform: "translate(-50.5px, -8px)", opacity: 1 }}>
+    <svg width={101} height={16} viewBox="0 0 101 16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         fillRule="evenodd"
         clipRule="evenodd"

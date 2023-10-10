@@ -1,14 +1,15 @@
 .pointer {
-  border: 2px solid #f43333;
   border-radius: 50%;
   position: fixed;
   left: 0;
   top: 0;
+  transform-origin: top left;
   pointer-events: none;
+  transition: all 0.3s ease-out;
+  border: 2px solid #f43333;
   z-index: 9999;
-  transition: transform 0.3s ease-out;
 }
 .glow {
   background-color: rgba(244, 51, 51, 0.35);
-  border: 2px solid rgba(244, 51, 51, 0);
+  border-color: rgba(244, 51, 51, 0);
 }

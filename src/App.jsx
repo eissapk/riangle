@@ -5,13 +5,12 @@ import DataProvider from "./Store/DataProvider";
 import Pointer from "./components/Pointer";
 
 function App() {
-
   return (
     <DataProvider>
-      <Header></Header>
-      <Main></Main>
-      <Footer></Footer>
-      <Pointer />
+      <Header />
+      <Main />
+      <Footer />
+      <Pointer multiplier={2} />
     </DataProvider>
   );
 }
