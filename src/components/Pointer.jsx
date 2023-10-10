@@ -4,6 +4,7 @@ import styles from "./Pointer.module.css";
 export default function Pointer({ multiplier }) {
   const [coords, setCoords] = useState({ x: 0, y: 0 });
   const [glow, setGlow] = useState(false);
+  const [opacity, setOpacity] = useState(1);
   const size = 40;
   const dim = { onGlow: size * multiplier, onDefault: size };
 
@@ -12,11 +13,18 @@ export default function Pointer({ multiplier }) {
     if (e.target.classList.contains("interact")) return setGlow(true);
     setGlow(false);
   };
+  const mouseLeave = () => setOpacity(0);
+  const mouseEnter = () => setOpacity(1);
 
   useEffect(() => {
-    window.addEventListener("mousemove", mouseMove);
-    console.warn("Mounted Pointer");
-    return () => window.removeEventListener("mousemove", mouseMove);
+    document.body.addEventListener("mousemove", mouseMove);
+    document.body.addEventListener("mouseleave", mouseLeave);
+    document.body.addEventListener("mouseenter", mouseEnter);
+    return () => {
+      document.body.removeEventListener("mousemove", mouseMove);
+      document.body.removeEventListener("mouseleave", mouseLeave);
+      document.body.removeEventListener("mouseenter", mouseEnter);
+    };
   }, []);
 
   const classes = `${styles.pointer} ${glow ? styles.glow : ""}`;
@@ -33,6 +41,7 @@ export default function Pointer({ multiplier }) {
         transform: glow ? translate("onGlow") : translate("onDefault"),
         width: dim.onDefault + "px",
         height: dim.onDefault + "px",
+        opacity: opacity,
       }}
     ></span>
   );
