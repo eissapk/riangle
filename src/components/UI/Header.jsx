@@ -30,16 +30,18 @@ export default function Header() {
       {/* mobile menu */}
       {burgerMenuIsShown && winWidth < breakPoint && <Menu>{<MenuItems hideMenu={hideMenu} mode="mobile" />}</Menu>}
 
-      <div className={classes.header}>
-        <Route to="/" className={`${classes.logo} interact`}>
-          <Logo />
-        </Route>
-        <Route to="/" className={`${classes.name} interact`}>
-          <Name />
-        </Route>
+      <div className={classes.headerWrapper}>
+        <div className={classes.header}>
+          <Route to="/" className={`${classes.logo} interact`}>
+            <Logo />
+          </Route>
+          <Route to="/" className={`${classes.name} interact`}>
+            <Name />
+          </Route>
 
-        {/* burger menu icon + desktop menu items */}
-        {winWidth < breakPoint ? <BurgerMenu burgerMenuIsShown={burgerMenuIsShown} onClick={() => setBurgerMenuIsShown(!burgerMenuIsShown)} /> : <MenuItems mode="desktop" />}
+          {/* burger menu icon + desktop menu items */}
+          {winWidth < breakPoint ? <BurgerMenu burgerMenuIsShown={burgerMenuIsShown} onClick={() => setBurgerMenuIsShown(!burgerMenuIsShown)} /> : <MenuItems mode="desktop" />}
+        </div>
       </div>
     </>
   );

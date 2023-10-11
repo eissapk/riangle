@@ -5,3 +5,6 @@
 .active {
   color: var(--text-color-hover) !important;
 }
+.pending {
+  color: gray !important;
+}

@@ -1,0 +1,85 @@
+.card {
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  width: 100%;
+  padding: 20px;
+  padding-right: 0;
+  margin-bottom: 20px;
+  align-self: self-start;
+}
+
+.card:hover h3 {
+  color: var(--text-color-hover);
+}
+
+.card a {
+  display: flex;
+  flex-direction: column;
+}
+
+.card .imgWrapper {
+  overflow: hidden;
+  width: calc(100% + 40px);
+}
+
+.card img {
+  width: 100%;
+  object-fit: cover;
+  transition: all 1s ease;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+}
+
+.card a p,
+.card a span,
+.card a h3 {
+  color: var(--text-color);
+  padding-right: 20px;
+}
+
+.card h3 {
+  font-family: "Magnita", serif;
+  font-weight: 400;
+  font-size: 32px;
+  margin: 0;
+  margin-top: 40px;
+  transition: all 0.3s ease;
+}
+.card p {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #9ca3af !important;
+  margin: 10px 0;
+}
+
+.card span {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  align-self: end;
+  transition: all 0.3s ease-in-out;
+  line-height: 30px;
+}
+
+.card span:hover {
+  padding-right: 10px;
+  color: var(--text-color-hover);
+}
+
+@media (min-width: 990px) {
+  .card {
+    padding: 40px;
+    padding-right: 0px;
+  }
+  .card a p,
+  .card a span,
+  .card a h3 {
+    padding-right: 40px;
+  }
+  .card span:hover {
+    padding-right: 30px;
+  }
+}

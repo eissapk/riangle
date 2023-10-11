@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import DataContext from "../../Store/data-context";
 import Card from "./Card";
-import classes from "./Cards.module.css";
+import "./Cards.css";
 export default function Cards() {
   const ctx = useContext(DataContext);
 
   return (
-    <div className={classes.cards}>
+    <div className="cards">
       {ctx.cards.map(card => (
         <Card key={card.route} card={card} />
       ))}
