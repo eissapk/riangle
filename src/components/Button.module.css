@@ -8,7 +8,7 @@
 }
 
 .button:focus-visible {
-  border-color: var(--bg-color);
+  border-color: var(--text-color);
 }
 
 .button:hover {

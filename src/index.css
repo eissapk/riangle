@@ -1,3 +1,10 @@
+:root {
+  --text-color: black;
+  --text-color-hover: #f43333;
+  --bg-color: white;
+  --border-color: rgb(229, 231, 235);
+}
+
 @font-face {
   font-family: "Magnita";
   src: url("./fonts/Magnita.woff") format("woff"), url("./fonts/Magnita.woff2") format("woff2"), url("./fonts/Magnita.svg#Magnita") format("svg"), url("./fonts/Magnita.eot"), url("./fonts/Magnita.eot?#iefix") format("embedded-opentype"), url("./fonts/Magnita.ttf") format("truetype");
@@ -23,18 +30,15 @@
   font-style: normal;
   font-display: swap;
 }
+*::selection {
+  background: var(--text-color-hover);
+  color: var(--bg-color);
+}
 
 *,
 *::after,
 *::before {
   box-sizing: border-box;
-}
-
-:root {
-  --text-color: black;
-  --text-color-hover: #f43333;
-  --bg-color: white;
-  --border-color: rgb(229, 231, 235);
 }
 
 body,
