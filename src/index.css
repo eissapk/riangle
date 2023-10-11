@@ -70,4 +70,14 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
+  font-family: "Magnita", serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+@media (min-width: 990px) {
+  #maintenance {
+    height: calc(100vh - 130px);
+  }
 }

@@ -1,5 +1,6 @@
 import Header from "./components/UI/Header";
 import Stories from "./pages/Stories";
+import Article from "./pages/Article";
 import Footer from "./components/UI/Footer";
 import DataProvider from "./Store/DataProvider";
 import Pointer from "./components/Pointer";
@@ -13,6 +14,7 @@ function App({ path }) {
       {path == "/work" && maintenance}
       {path == "/about" && maintenance}
       {path == "/stories" && <Stories />}
+      {path == "/stories/:article" && <Article />}
       {path == "/contact" && maintenance}
       <Footer />
       <Pointer multiplier={2} />

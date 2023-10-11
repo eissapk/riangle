@@ -7,6 +7,7 @@ const router = createBrowserRouter([
   { path: "/work", element: <App path="/work" /> },
   { path: "/about", element: <App path="/about" /> },
   { path: "/stories", element: <App path="/stories" /> },
+  { path: "/stories/:article", element: <App path="/stories/:article" /> },
   { path: "/contact", element: <App path="/contact" /> },
 ]);
 export default router;

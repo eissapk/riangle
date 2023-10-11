@@ -1,5 +1,7 @@
 import "./Card.css";
 import { NavLink } from "react-router-dom";
+import Arrow from "../Icons/Arrow";
+import Arrow2 from "../Icons/Arrow2";
 
 export default function Card({ card }) {
   return (
@@ -10,7 +12,12 @@ export default function Card({ card }) {
         </div>
         <h3 className="interact">{card.desc}</h3>
         <p className="interact">{card.date}</p>
-        <span className="interact">READ ARTICLE</span>
+        <div className="interact readBtn">
+          <span className="interact">READ ARTICLE</span>
+          <Arrow />
+          <Arrow2 />
+          <Arrow2 />
+        </div>
       </NavLink>
     </div>
   );
