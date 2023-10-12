@@ -43,13 +43,11 @@
 
 body,
 html {
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   font-family: Helvetica, Arial, sans-serif;
-  /* font-family: "Magnita", serif; */
-  /* font-family: "Inter", sans-serif; */
-  /* font-family: "Signeton"; */
 }
 
 svg {
@@ -66,6 +64,92 @@ a {
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
+}
+
+.hide {
+  display: none;
+}
+.app-paused * {
+  animation: none;
+}
+.app-paused {
+  overflow: hidden !important;
+}
+/* animations */
+.toTop {
+  animation: toTop 1s ease forwards;
+}
+.toBottom {
+  animation: toBottom 1s ease forwards;
+}
+.toTopLeft {
+  animation: toTopLeft 1s ease forwards;
+}
+.toBottomRight {
+  animation: toBottomRight 1s ease forwards;
+}
+.toLeft {
+  animation: toLeft 1s ease forwards;
+}
+
+@keyframes toBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes toLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+@keyframes toTop {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes toTopLeft {
+  0% {
+    opacity: 0;
+    transform: translate(10px, 10px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes toBottomRight {
+  0% {
+    opacity: 0;
+    transform: translate(-10px, -10px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0);
+  }
 }
 
 #maintenance {

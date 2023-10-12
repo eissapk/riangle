@@ -1,6 +1,6 @@
 import Link from "../Link";
 import Logo from "../Icons/Logo";
-import DataContext from "../../Store/data-context";
+import { DataContext } from "../../Store/data-context";
 import { useContext } from "react";
 import "./Footer.css";
 
@@ -16,7 +16,7 @@ function Footer() {
 
       <ul>
         {ctx.footer.links.map((obj, index) => (
-          <Link className="interact" key={index} url={obj.url} label={obj.label} attrs={ctx.footer.attrs} />
+          <Link style={{ opacity: 1 }} className="interact" key={index} url={obj.url} label={obj.label} attrs={ctx.footer.attrs} />
         ))}
       </ul>
     </footer>

@@ -1,7 +1,7 @@
-import classes from "./Label.module.css"
+import "./Label.css"
 export default function Label() {
   return (
-    <div className={classes.label}>
+    <div className="storiesSectionLabel">
         <h1>Stories</h1>
         <div>
             <span>From</span>

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import DataContext from "../../Store/data-context";
+import { DataContext } from "../../Store/data-context";
 import Card from "./Card";
 import "./Cards.css";
 import Button from "../Button";

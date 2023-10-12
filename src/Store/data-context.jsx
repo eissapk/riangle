@@ -7,6 +7,7 @@ import img5 from "../assets/5.webp";
 import img6 from "../assets/6.webp";
 
 export const defaultValues = {
+  headerDelay: 4.5,
   header: {
     menu: ["WORK", "ABOUT", "STORIES", "CONTACT"],
   },
@@ -71,6 +72,10 @@ export const defaultValues = {
   },
 };
 
-const DataContext = React.createContext(defaultValues);
+export const loaderUpdateData = {
+  hideLoader: () => {},
+};
 
-export default DataContext;
+export const DataContext = React.createContext(defaultValues);
+export const LoaderContext = React.createContext({isLoading: true});
+export const LoaderUpdateContext = React.createContext(loaderUpdateData);
