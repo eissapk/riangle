@@ -30,4 +30,10 @@ export default () => {
     console.log(percent);
     counterElm.innerHTML = percent + "%";
   }, 10);
+
+  // fallback for bad internet
+  setTimeout(() => {
+    const preloader = document.getElementById("preloader");
+    if (percent == 100 && preloader) window.dispatchEvent(new Event("load"));
+  }, 3000);
 };
