@@ -20,10 +20,96 @@
     <link rel="shortcut icon" href="https://riangle.s3-eu-west-1.amazonaws.com/v4/meta/favicon.ico" />
     <title>Stories - Riangle</title>
     <meta name="next-head-count" content="19" />
-    <script type="module" crossorigin src="/assets/index-47249460.js"></script>
+    <style>
+      #preloader {
+        height: 100vh;
+        width: 100vw;
+        font-family: "Magnita", serif;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        background: var(--bg-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+      }
+
+      #preloader svg {
+        position: absolute;
+        height: auto;
+        width: 155px;
+        margin-bottom: 200px;
+        animation: preloaderLogo 2s ease forwards;
+        animation-play-state: paused;
+      }
+      #preloader em {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: var(--text-color-hover);
+        animation: preloaderLine 2s ease 0.15s forwards;
+        animation-play-state: paused;
+      }
+
+      #preloader span {
+        color: var(--text-color-hover);
+        font-family: "Magnita";
+        font-weight: 600;
+        letter-spacing: 0.4px;
+        font-size: 70px;
+        margin-top: 160px;
+        transition: all 0.3s ease;
+      }
+      #preloader.animateLoader svg,
+      #preloader.animateLoader em {
+        animation-play-state: running !important;
+      }
+
+      @keyframes preloaderLogo {
+        from {
+          position: absolute;
+          top: calc(50% - 124px);
+          transform: translateY(-50%);
+          width: 155px;
+          height: 124px;
+        }
+        to {
+          width: 20px;
+          height: 16px;
+          top: 22px;
+          transform: translateY(0);
+        }
+      }
+      @keyframes preloaderLine {
+        from {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        to {
+          top: 60px;
+          transform: translateY(0);
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-ed31c1ad.js"></script>
+    <link rel="stylesheet" href="/assets/index-66f59259.css">
   </head>
-  <body>
+  <body class="app-paused">
     <div id="root"></div>
+    <div id="overlayers"></div>
+    <div id="preloader">
+      <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 0L15 7.999H5L10 0Z" fill="#F43333" />
+        <path d="M5 7.99902L10 15.998H0L5 7.99902Z" fill="#F43333" />
+        <path d="M15 7.99902L20 15.998H10L15 7.99902Z" fill="#F43333" />
+      </svg>
+      <em></em>
+      <span>0%</span>
+    </div>
     
   </body>
 </html>
