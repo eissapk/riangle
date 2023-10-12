@@ -32,8 +32,17 @@ export default () => {
   }, 10);
 
   // fallback for bad internet
-  setTimeout(() => {
+  let interval2 = null;
+  function hideLoader() {
     const preloader = document.getElementById("preloader");
-    if (percent == 100 && preloader) window.dispatchEvent(new Event("load"));
-  }, 3000);
+    if (!preloader) {
+      if (interval2) clearInterval(interval2);
+      return;
+    }
+    if (percent == 100 && preloader) {
+      window.dispatchEvent(new Event("load"));
+      if (interval2) clearInterval(interval2);
+    }
+  }
+  interval2 = setInterval(hideLoader, 10);
 };

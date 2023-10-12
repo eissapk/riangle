@@ -8,7 +8,7 @@ import { useEffect, useContext } from "react";
 import { LoaderUpdateContext } from "./Store/data-context";
 
 function App({ path }) {
-  window.addEventListener("load", loader, { once: true });
+  window.addEventListener("load", loader, { once: true }); // todo place this event in main.jsx
   const maintenance = <div id="maintenance">"{path}" route is under maintenance</div>;
   const ctx = useContext(LoaderUpdateContext);
 
